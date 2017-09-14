@@ -1,4 +1,5 @@
-**Finding Lane Lines on the Road**
+**Finding Lane Lines on the Road** 
+(This is the write up report for this project. Readme.md is just a clone from the original repository)
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
@@ -25,7 +26,7 @@ Once you read a sample image (or) a frame of the video, the pipeline consisted o
 A number of computer vision algorithms use grayscale images as inputs so the features are color independent.
        ![alt text][image1]
 2. Apply gaussian smoothing:
-Here, we blur the image to smoothen the ‘weak’ edges.
+Here, we blur the image to smoothen the â€˜weakâ€™ edges.
        ![alt text][image2]
 3. Apply Canny filter
 This algorithm performs edge detection.
@@ -35,7 +36,7 @@ This is used to limit the lane finding to only a specific region in front of the
 	 ![alt text][image4]
 	 ![alt text][image5]
 5. Apply Hough Transform
-This algorithm helps us find ‘line’ like features in the image by transforming image space to a hough parameter space.
+This algorithm helps us find â€˜lineâ€™ like features in the image by transforming image space to a hough parameter space.
 	 ![alt text][image6]
 After this, we visualize the lanes on the original image. In this project, we focused constructing these high level steps to perform lane detection. So, a number of wrapper functions were provided making it easy to concentrate on the algorithm rather than the implementation.
 	 ![alt text][image7]
@@ -44,7 +45,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 1. Averaging: Before I researched on ways to achieve the goal of drawing a single line for left and right lanes, this was the most intuitive idea I had. This consists of the following steps:
 A. Use the two point slope formula to figure out if the points belong to the left or right lane. 
-B. Average all the right points and left points separately to get a ‘mean’ left and right lane coordinates.
+B. Average all the right points and left points separately to get a â€˜meanâ€™ left and right lane coordinates.
 C. Draw lines using cv2.line.
 Although this achieved the goal of drawing a single line for each of the lanes, the result was there was no easy way to extend these lines. I thought averaging would help with the noisy (jittery) nature of line detection and that did happen to some extent. However, the lines were still flickering. 
 
@@ -79,8 +80,8 @@ The result was much better. The lines were staying longer without too many jitte
 
 ### Rubric Check
 Have all project files been included with the submission?
-Jupyter notebook – Done
-Write up – Done
+Jupyter notebook â€“ Done
+Write up â€“ Done
 
 Does the pipeline for line identification take road images from a video as input and return an annotated video stream as output?
 Done
