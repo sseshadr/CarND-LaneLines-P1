@@ -1,24 +1,26 @@
 **Finding Lane Lines on the Road** 
+
 (This is the write up report for this project. Readme.md is just a clone from the original repository)
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
+---
 
 [//]: # (Image References)
 
-[image1]: ./ test_images_output/grayscale.jpg "Grayscale"
+[image1]: ./test_images_output/grayscale.JPG "Grayscale"
 
-[image2]: ./ test_images_output/gaussianSmoothing.jpg "Gaussian Smoothing"
+[image2]: ./test_images_output/gaussianSmoothing.JPG "Gaussian Smoothing"
 
-[image3]: ./ test_images_output/cannyEdge.jpg "Canny Edge Detection"
+[image3]: ./test_images_output/cannyEdge.JPG "Canny Edge Detection"
 
-[image4]: ./ test_images_output/roi.jpg "Region of Interest"
+[image4]: ./test_images_output/roi.JPG "Region of Interest"
 
-[image5]: ./ test_images_output/edgeroi.jpg "Line Masked by Region of Interest"
+[image5]: ./test_images_output/edgeroi.JPG "Line Masked by Region of Interest"
 
-[image6]: ./ test_images_output/houghLine.jpg "Hough Line Detection"
+[image6]: ./test_images_output/houghLine.JPG "Hough Line Detection"
 
 [image7]: ./test_images_output/solidWhiteCurve_output.jpg "Solid White Curve Output" 
 
@@ -32,33 +34,33 @@ Once you read a sample image (or) a frame of the video, the pipeline consisted o
 1. Convert image to grayscale:
 A number of computer vision algorithms use grayscale images as inputs so the features are color independent.
 
-       ![alt text][image1]
+![alt text][image1]
        
 2. Apply gaussian smoothing:
 Here, we blur the image to smoothen the ‘weak’ edges.
 
-       ![alt text][image2]
+![alt text][image2]
        
 3. Apply Canny filter
 This algorithm performs edge detection.
 
-       ![alt text][image3]
+![alt text][image3]
        
 4. Create an image mask for a region of interest
 This is used to limit the lane finding to only a specific region in front of the car.
 
-      ![alt text][image4]
+![alt text][image4]
       
-      ![alt text][image5]
+![alt text][image5]
       
 5. Apply Hough Transform
 This algorithm helps us find ‘line’ like features in the image by transforming image space to a hough parameter space.
 
-	 ![alt text][image6]
+![alt text][image6]
 	 
 After this, we visualize the lanes on the original image. In this project, we focused constructing these high level steps to perform lane detection. So, a number of wrapper functions were provided making it easy to concentrate on the algorithm rather than the implementation.
 
-	 ![alt text][image7]
+![alt text][image7]
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() as follows:
 
@@ -99,7 +101,9 @@ The result was much better. The lines were staying longer without too many jitte
 
 ### Rubric Check
 Have all project files been included with the submission?
+
 Jupyter notebook – Done
+
 Write up – Done
 
 Does the pipeline for line identification take road images from a video as input and return an annotated video stream as output?
