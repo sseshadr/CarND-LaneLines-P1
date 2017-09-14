@@ -1,4 +1,8 @@
 # **Finding Lane Lines on the Road** 
+
+**(This is NOT the write up report for this project. Readme.md is just a clone from the original repository. writeup_laneLines.md is the actual write up for the project. P1.ipynb is the notebook)**
+
+
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 <img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
